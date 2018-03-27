@@ -7,19 +7,20 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="Kubernetes、K8S" />
     
-    <meta name="description" content="Kubernetes (通常稱為K8s) 是用於自動部署、擴展和管理容器化（containerized）應用程式的開源系統.K8S建置教學 (以三台環境建置為例)環境需3台。一台當master，二台當node">
+    <meta name="description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上(Docker的輕量虛擬化的技術及易於移植的特性，非常利於現代雲端服務的開發及部署)，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 kubectl是和Kubernetes API交互的命令行程序 K8S建置教學 (以三台環境">
+<meta name="keywords" content="Kubernetes、K8S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kubernetes">
 <meta property="og:url" content="http://yoursite.com/2018/03/27/Kubernetes/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Kubernetes (通常稱為K8s) 是用於自動部署、擴展和管理容器化（containerized）應用程式的開源系統.K8S建置教學 (以三台環境建置為例)環境需3台。一台當master，二台當node">
+<meta property="og:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上(Docker的輕量虛擬化的技術及易於移植的特性，非常利於現代雲端服務的開發及部署)，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 kubectl是和Kubernetes API交互的命令行程序 K8S建置教學 (以三台環境">
 <meta property="og:image" content="http://yoursite.com/2018/03/27/Kubernetes/screenshot_001.jpg">
-<meta property="og:updated_time" content="2018-03-27T09:19:33.119Z">
+<meta property="og:updated_time" content="2018-03-27T09:32:47.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
-<meta name="twitter:description" content="Kubernetes (通常稱為K8s) 是用於自動部署、擴展和管理容器化（containerized）應用程式的開源系統.K8S建置教學 (以三台環境建置為例)環境需3台。一台當master，二台當node">
+<meta name="twitter:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上(Docker的輕量虛擬化的技術及易於移植的特性，非常利於現代雲端服務的開發及部署)，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 kubectl是和Kubernetes API交互的命令行程序 K8S建置教學 (以三台環境">
 <meta name="twitter:image" content="http://yoursite.com/2018/03/27/Kubernetes/screenshot_001.jpg">
     
 
@@ -67,13 +68,13 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
                                         
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
                                 </li>
                             
                         </ul>
@@ -81,7 +82,7 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -102,8 +103,8 @@
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'categories',
-            TAGS: 'etiquetes',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -129,7 +130,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sense categoria
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
@@ -156,11 +157,19 @@
     </div>
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Kubernetes、K8S/">Kubernetes、K8S</a>
+    </div>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Kubernetes-通常稱為K8s-是用於自動部署、擴展和管理容器化（containerized）應用程式的開源系統"><a href="#Kubernetes-通常稱為K8s-是用於自動部署、擴展和管理容器化（containerized）應用程式的開源系統" class="headerlink" title="Kubernetes (通常稱為K8s) 是用於自動部署、擴展和管理容器化（containerized）應用程式的開源系統."></a>Kubernetes (通常稱為K8s) 是用於自動部署、擴展和管理容器化（containerized）應用程式的開源系統.</h1><h1 id="K8S建置教學-以三台環境建置為例"><a href="#K8S建置教學-以三台環境建置為例" class="headerlink" title="K8S建置教學 (以三台環境建置為例)"></a>K8S建置教學 (以三台環境建置為例)</h1><h2 id="環境需3台。一台當master，二台當node"><a href="#環境需3台。一台當master，二台當node" class="headerlink" title="環境需3台。一台當master，二台當node"></a>環境需3台。一台當master，二台當node</h2><p><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_002.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_003.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_004.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_005.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_006.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_007.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_008.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_009.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_010.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_011.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_012.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_013.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_014.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_015.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_016.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/k8s/screenshot_017.jpg" alt="K8S" title="控制台"></p>
+            <h3 id="Kubernetes-是什麼"><a href="#Kubernetes-是什麼" class="headerlink" title="Kubernetes 是什麼"></a>Kubernetes 是什麼</h3><p>Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上(Docker的輕量虛擬化的技術及易於移植的特性，非常利於現代雲端服務的開發及部署)，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。</p>
+<p>kubectl是和Kubernetes API交互的命令行程序</p>
+<h2 id="K8S建置教學-以三台環境建置為例"><a href="#K8S建置教學-以三台環境建置為例" class="headerlink" title="K8S建置教學 (以三台環境建置為例)"></a>K8S建置教學 (以三台環境建置為例)</h2><p>環境需3台。一台當master，二台當node</p>
+<p><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_002.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_003.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_004.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_005.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_006.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_007.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_008.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_009.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_010.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_011.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt="K8S" title="控制台"></p>
 
         </div>
         <footer class="article-footer">
@@ -168,7 +177,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/03/27/Kubernetes/" data-id="cjf9gaehk0002ysk76k56vqv0" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2018/03/27/Kubernetes/" data-id="cjf9gqubq000130k78f8jmefx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -248,7 +257,7 @@
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>seguir:</p>
+        <p>follow:</p>
         <ul class="social-links">
             
                 
@@ -307,7 +316,7 @@
     
     
         <a href="/2018/03/27/post-name/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
+        <strong class="article-nav-caption">older</strong>
         <p class="article-nav-title">post_name</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -417,7 +426,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">arxius</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">4</span></li></ul>
         </div>
@@ -426,9 +435,23 @@
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes、K8S/">Kubernetes、K8S</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Kubernetes、K8S/" style="font-size: 10px;">Kubernetes、K8S</a>
+        </div>
+    </div>
+
 
             
                 
