@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
 <meta property="og:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/pod.jpg">
-<meta property="og:updated_time" content="2018-04-02T11:11:15.777Z">
+<meta property="og:updated_time" content="2018-04-02T11:13:29.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
 <meta name="twitter:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
@@ -68,13 +68,13 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Home</a>
+                                    <a class="main-nav-list-link" href="/">Inici</a>
                                 </li>
                             
                                         
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
                                 </li>
                             
                         </ul>
@@ -82,7 +82,7 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -103,8 +103,8 @@
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -130,7 +130,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    Sense categoria
     </h1>
 </div>
                         <div class="main-body-content">
@@ -167,7 +167,7 @@
         
         <div class="article-entry" itemprop="articleBody">
             <h3 id="Kubernetes-是什麼"><a href="#Kubernetes-是什麼" class="headerlink" title="Kubernetes 是什麼"></a>Kubernetes 是什麼</h3><p>Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。</p>
-<p>K8S屬分布式系統，主要元件有：<br>一、Master – 主要控制節點。包含以下元件：<br>    1.API Server：提供給外部使用者和內部元件呼叫。<br>    2.scheduler：負責各種排程作業。<br>    3.controller：負責執行各種控制。<br>二、. Node – 執行k8s的實體或虛擬的主機，並運行了許多容器。包含以下元件：<br>    1.kubelet：負責Node節點上pod的創建、修改、監控、刪除等全生命週期的管理<br>    2.kubernetes proxy：Proxy是為了解決外部網絡能夠訪問跨機器集群中容器提供的應用服務而設計的。<br>    3.docker：node是容器執行節點，需要執行docker服務<br>管理pod、檢查容器是否正常運行、監控所有節點的資源使用狀況<br>在 kubernetes 的設定中，最基本的管理单位是pod，而不是 container。pod是許多容器的組合。<br><img src="/2018/03/27/Kubernetes/pod.jpg" alt="K8S" title="pod VS container"></p>
+<p>K8S屬分布式系統，主要元件有：<br>一、Master – 主要控制節點。包含以下元件：<br>    1.API Server：提供給外部使用者和內部元件呼叫。<br>    2.scheduler：負責各種排程作業。<br>    3.controller：負責執行各種控制。<br>二、. Node – 執行k8s的實體或虛擬的主機，並運行了許多容器。包含以下元件：<br>    1.kubelet：負責Node節點上pod的創建、修改、監控、刪除等全生命週期的管理<br>    2.kubernetes proxy：Proxy是為了解決外部網絡能夠訪問跨機器集群中容器提供的應用服務而設計的。<br>    3.docker：node是容器執行節點，需要執行docker服務<br>管理pod、檢查容器是否正常運行、監控所有節點的資源使用狀況<br>在 kubernetes 的設定中，最基本的管理单位是pod，而不是 container。pod是許多容器的組合。<br><img src="/2018/03/27/Kubernetes/pod.jpg" alt="pod" title="pod VS container"></p>
 <p>Kubernetes中所有的配置都是通过API对象的spec去设置的s<br>kubernates 是使用etcd做為系統的設定儲存中心、重要資料都是持久化在etcd中的。</p>
 <p>kubectl是和Kubernetes API交互的命令行程序</p>
 <p>k8s使用etcd作為儲存中介軟體</p>
@@ -179,8 +179,7 @@
 <p>「node」 join node，貼上金鑰讓node加入到master，即完成cluster<br><img src="/2018/03/27/Kubernetes/screenshot_007.jpg" alt="node1 join" title="node1 join"><br><img src="/2018/03/27/Kubernetes/screenshot_008.jpg" alt="node2 join" title="node2 join"></p>
 <p>「master」真正分配網路<br><img src="/2018/03/27/Kubernetes/screenshot_009.jpg" alt="分配網路文件" title="分配網路文件"><br><img src="/2018/03/27/Kubernetes/screenshot_010.jpg" alt="分配網路" title="分配網路"></p>
 <p>「master」檢查 DNS 狀態狀態<br>執行kubectl get pods –namespace kube-system<br>剛開始 dns 還是 pending 狀態，等過一段時間後就會是 running 狀態<br><img src="/2018/03/27/Kubernetes/screenshot_011.jpg" alt="檢查 DNS 狀態狀態" title="檢查 DNS 狀態狀態"><br>以上k8s建置完畢</p>
-<p>###測試cluster，以nginx為例</p>
-<p>建置nginx pods狀態，nginx的狀態要在running<br>執行kubectl run nginx –image=nginx –replicas=2 –port=80<br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="建置ngin" title="建置ngin台"><br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="查詢pods" title="查詢pods"><br>開始部署<br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="K8S" title="控制台"><br>開始服務使用的port<br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="K8S" title="控制台"><br>查詢服務狀態<br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="K8S" title="控制台"><br> 網頁測試<br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt="K8S" title="控制台"></p>
+<h3 id="測試cluster，以nginx為例"><a href="#測試cluster，以nginx為例" class="headerlink" title="測試cluster，以nginx為例"></a>測試cluster，以nginx為例</h3><p>建置nginx pods狀態，nginx的狀態要在running<br>執行kubectl run nginx –image=nginx –replicas=2 –port=80<br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="建置ngin" title="建置ngin台"><br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="查詢pods" title="查詢pods"><br>開始部署<br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="K8S" title="控制台"><br>開始服務使用的port<br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="K8S" title="控制台"><br>查詢服務狀態<br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="K8S" title="控制台"><br> 網頁測試<br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt="K8S" title="控制台"></p>
 <hr>
 <p>如需重建，整組刪掉後再進行kubectl init<br><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="kubeamd reset 刪除" title="kubeamd reset 刪除"></p>
 <p>参考文獻<br><a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" target="_blank" rel="noopener">1.https://kubernetes.io/docs/setup/independent/install-kubeadm/</a><br><a href="https://jimmysong.io/kubernetes-handbook/concepts/concepts.html" target="_blank" rel="noopener">2.https://jimmysong.io/kubernetes-handbook/concepts/concepts.html</a><br><a herf="http://cizixs.com/2016/10/25/kubernetes-intro-kubelet">3.http://cizixs.com/2016/10/25/kubernetes-intro-kubelet </a></p>
@@ -191,7 +190,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjfi4wm7x0001sck71z6myxsc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjfi4zjw00002a0k7ejbznmve" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -271,7 +270,7 @@
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>follow:</p>
+        <p>seguir:</p>
         <ul class="social-links">
             
                 
@@ -329,7 +328,7 @@
 <nav id="article-nav">
     
         <a href="/2018/03/28/ELK_filebeat/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
+        <strong class="article-nav-caption">més nou</strong>
         <p class="article-nav-title">
         
             filebeat
@@ -340,7 +339,7 @@
     
     
         <a href="/2018/03/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
+        <strong class="article-nav-caption">antic</strong>
         <p class="article-nav-title">Hello World</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -430,7 +429,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">arxius</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
@@ -440,7 +439,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">tags</h3>
+        <h3 class="widget-title">etiquetes</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes、K8S/">Kubernetes、K8S</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -450,7 +449,7 @@
             
                 
     <div class="widget-wrap widget-float">
-        <h3 class="widget-title">tag cloud</h3>
+        <h3 class="widget-title">etiqueta cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/Kubernetes、K8S/" style="font-size: 10px;">Kubernetes、K8S</a>
         </div>
