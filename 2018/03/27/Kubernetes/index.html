@@ -9,18 +9,18 @@
     
         <meta name="keywords" content="Kubernetes、K8S" />
     
-    <meta name="description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點    1.API Server：提供給外部使用者和內部元件呼叫。    2.scheduler：負責各種排程">
+    <meta name="description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
 <meta name="keywords" content="Kubernetes、K8S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kubernetes">
 <meta property="og:url" content="http://yoursite.com/2018/03/27/Kubernetes/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點    1.API Server：提供給外部使用者和內部元件呼叫。    2.scheduler：負責各種排程">
+<meta property="og:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
 <meta property="og:image" content="http://yoursite.com/2018/03/27/Kubernetes/pod.jpg">
-<meta property="og:updated_time" content="2018-03-28T09:51:19.316Z">
+<meta property="og:updated_time" content="2018-04-02T08:53:12.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
-<meta name="twitter:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點    1.API Server：提供給外部使用者和內部元件呼叫。    2.scheduler：負責各種排程">
+<meta name="twitter:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
 <meta name="twitter:image" content="http://yoursite.com/2018/03/27/Kubernetes/pod.jpg">
     
 
@@ -167,12 +167,11 @@
         
         <div class="article-entry" itemprop="articleBody">
             <h3 id="Kubernetes-是什麼"><a href="#Kubernetes-是什麼" class="headerlink" title="Kubernetes 是什麼"></a>Kubernetes 是什麼</h3><p>Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。</p>
-<p>K8S屬分布式系統，主要元件有：<br>一、Master – 主要控制節點<br>    1.API Server：提供給外部使用者和內部元件呼叫。<br>    2.scheduler：負責各種排程作業。<br>    3.controller：負責執行各種控制。<br>二、. Node – 工作的節點，上面運行了許多容器。</p>
-<p>kubelet 主要功能<br>管理pod、檢查容器是否正常運行、監控所有節點的資源使用狀況<br>在 kubernetes 的设计中，最基本的管理单位是 pod，而不是 container。<br><img src="/2018/03/27/Kubernetes/pod.jpg" alt="K8S" title="pod VS container"></p>
-<p>Kubernetes中所有的配置都是通过API对象的spec去设置的<br>kubernates 是使用etcd做為系統的設定儲存中心、重要資料都是持久化在etcd中的。</p>
+<p>K8S屬分布式系統，主要元件有：<br>一、Master – 主要控制節點。包含以下元件：<br>    1.API Server：提供給外部使用者和內部元件呼叫。<br>    2.scheduler：負責各種排程作業。<br>    3.controller：負責執行各種控制。<br>二、. Node – 執行k8s的實體或虛擬的主機，並運行了許多容器。包含以下元件：<br>    1.kubelet：負責Node節點上pod的創建、修改、監控、刪除等全生命週期的管理<br>    2.kubernetes proxy：Proxy是為了解決外部網絡能夠訪問跨機器集群中容器提供的應用服務而設計的。<br>    3.docker：node是容器執行節點，需要執行docker服務<br>管理pod、檢查容器是否正常運行、監控所有節點的資源使用狀況<br>在 kubernetes 的設定中，最基本的管理单位是pod，而不是 container。pod是許多容器的組合。<br><img src="/2018/03/27/Kubernetes/pod.jpg" alt="K8S" title="pod VS container"></p>
+<p>Kubernetes中所有的配置都是通过API对象的spec去设置的s<br>kubernates 是使用etcd做為系統的設定儲存中心、重要資料都是持久化在etcd中的。</p>
 <p>kubectl是和Kubernetes API交互的命令行程序</p>
-<h3 id="K8S建置教學-以三台環境建置為例"><a href="#K8S建置教學-以三台環境建置為例" class="headerlink" title="K8S建置教學 (以三台環境建置為例)"></a>K8S建置教學 (以三台環境建置為例)</h3><p>環境需3台。一台當master，二台當node</p>
-<p><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_002.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_003.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_004.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_005.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_006.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_007.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_008.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_009.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_010.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_011.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt="K8S" title="控制台"></p>
+<p>k8s使用etcd作為儲存中介軟體</p>
+<h3 id="K8S建置教學-以三台環境建置為例"><a href="#K8S建置教學-以三台環境建置為例" class="headerlink" title="K8S建置教學 (以三台環境建置為例)"></a>K8S建置教學 (以三台環境建置為例)</h3><p>環境需3台。一台當master，二台當node<br>執行 apt-get updat  和 apt-get upgrade<br><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_002.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_003.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_004.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_005.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_006.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_007.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_008.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_009.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_010.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_011.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt="K8S" title="控制台"></p>
 <p>参考文獻<br><a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" target="_blank" rel="noopener">1.https://kubernetes.io/docs/setup/independent/install-kubeadm/</a><br><a href="https://jimmysong.io/kubernetes-handbook/concepts/concepts.html" target="_blank" rel="noopener">2.https://jimmysong.io/kubernetes-handbook/concepts/concepts.html</a><br><a herf="http://cizixs.com/2016/10/25/kubernetes-intro-kubelet">3.http://cizixs.com/2016/10/25/kubernetes-intro-kubelet </a></p>
 
         </div>
@@ -181,7 +180,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/03/27/Kubernetes/" data-id="cjfawwmh500004gk7gxgq3iav" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2018/03/27/Kubernetes/" data-id="cjfhzzypz000004k7xi270fxy" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
