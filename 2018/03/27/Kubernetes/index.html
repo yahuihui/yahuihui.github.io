@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
 <meta property="og:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/pod.jpg">
-<meta property="og:updated_time" content="2018-04-02T09:29:26.354Z">
+<meta property="og:updated_time" content="2018-04-02T10:33:22.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
 <meta name="twitter:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
@@ -171,9 +171,15 @@
 <p>Kubernetes中所有的配置都是通过API对象的spec去设置的s<br>kubernates 是使用etcd做為系統的設定儲存中心、重要資料都是持久化在etcd中的。</p>
 <p>kubectl是和Kubernetes API交互的命令行程序</p>
 <p>k8s使用etcd作為儲存中介軟體</p>
-<h3 id="K8S建置教學-以三台環境建置為例"><a href="#K8S建置教學-以三台環境建置為例" class="headerlink" title="K8S建置教學 (以三台環境建置為例)"></a>K8S建置教學 (以三台環境建置為例)</h3><p>環境需3台。一台當master，二台當node<br>登入後切換至最高權限 sudo su<br><img src="/2018/03/27/Kubernetes/0.jpg" alt="K8S" title="sudo su"></p>
-<p>安裝kubeadm 管理k8s套件，依照文件照操作<br><img src="/2018/03/27/Kubernetes/kubeadm.jpg" alt="K8S" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/001.jpg" alt="K8S" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/002.jpg" alt="K8S" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/003.jpg" alt="K8S" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/004.jpg" alt="K8S" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/005.jpg" alt="K8S" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/006.jpg" alt="K8S" title="安裝kubeadm"></p>
-<p><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_002.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_003.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_004.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_005.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_006.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_007.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_008.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_009.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_010.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_011.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt="K8S" title="控制台"></p>
+<h3 id="K8S建置教學-以三台環境建置為例"><a href="#K8S建置教學-以三台環境建置為例" class="headerlink" title="K8S建置教學 (以三台環境建置為例)"></a>K8S建置教學 (以三台環境建置為例)</h3><p>環境需3台。一台當master，二台當node</p>
+<p>「master、node」登入後切換至最高權限 sudo su<br><img src="/2018/03/27/Kubernetes/0.jpg" alt="K8S" title="sudo su"></p>
+<p>「master、node」安裝kubeadm 管理k8s套件，依照文件照操作<br><img src="/2018/03/27/Kubernetes/kubeadm.jpg" alt="kubeadm官方文件" title="kubeadm官方文件"><br><img src="/2018/03/27/Kubernetes/001.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/002.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/003.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/004.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/005.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/006.jpg" alt="安裝kubeadm" title="安裝kubeadm"></p>
+<p>「master、node」關閉SWAP，因為SWAP開著會無法安裝K8S<br>swapoff –a<br><img src="/2018/03/27/Kubernetes/swapoff.jpg" alt="安關閉SWAP" title="關閉SWAPS"></p>
+<p>安裝完kubeadm之後進行初始化和架設網路，網路是使用fiannl來建置。<br>「master」 kubeadm初始化文件<br><img src="/2018/03/27/Kubernetes/screenshot_002.jpg" alt="kubeadm初始化文件" title="kubeadm初始化文件"><br>kubeadm init –pod-network-cidr=10.244.0.0/16<br><img src="/2018/03/27/Kubernetes/screenshot_003.jpg" alt="kubeadm初始化" title="kubeadm初始化"><br><img src="/2018/03/27/Kubernetes/screenshot_004.jpg" alt="kubeadm初始化" title="kubeadm初始化"></p>
+<p>kubeadm架設網路<br>sysctl net.bridge.bridge-nf-call-iptables=1<br><img src="/2018/03/27/Kubernetes/screenshot_005.jpg" alt="kubeadm網路" title="kubeadm網路"></p>
+<p>建置資料夾、COYP檔案、修改權限<br>mkdir -p $HOME/.kube<br>sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config<br>sudo chown $(id -u):$(id -g) $HOME/.kube/config<br><img src="/2018/03/27/Kubernetes/screenshot_006.jpg" alt="建置資料夾、COYP檔案、修改權限" title="建置資料夾、COYP檔案、修改權限"></p>
+<p><img src="/2018/03/27/Kubernetes/screenshot_007.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_008.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_009.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_010.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_011.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="K8S" title="控制台"><br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt="K8S" title="控制台"></p>
+<p>如需重建，整組刪掉後再進行kubectl init<br><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="kubeamd reset 刪除" title="kubeamd reset 刪除"></p>
 <p>参考文獻<br><a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" target="_blank" rel="noopener">1.https://kubernetes.io/docs/setup/independent/install-kubeadm/</a><br><a href="https://jimmysong.io/kubernetes-handbook/concepts/concepts.html" target="_blank" rel="noopener">2.https://jimmysong.io/kubernetes-handbook/concepts/concepts.html</a><br><a herf="http://cizixs.com/2016/10/25/kubernetes-intro-kubelet">3.http://cizixs.com/2016/10/25/kubernetes-intro-kubelet </a></p>
 
         </div>
@@ -182,7 +188,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjfi1aj770001hgk74lpoyher" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjfi1rk95000248k7s0gsmpht" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
