@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
 <meta property="og:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/pod.jpg">
-<meta property="og:updated_time" content="2018-04-02T11:13:29.165Z">
+<meta property="og:updated_time" content="2018-04-02T11:14:40.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
 <meta name="twitter:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。 K8S屬分布式系統，主要元件有：一、Master – 主要控制節點。包含以下元件：    1.API Server：提供給外部使用者和內部元件呼叫。    2.schedule">
@@ -173,7 +173,7 @@
 <p>k8s使用etcd作為儲存中介軟體</p>
 <h3 id="K8S建置教學-以三台環境建置為例"><a href="#K8S建置教學-以三台環境建置為例" class="headerlink" title="K8S建置教學 (以三台環境建置為例)"></a>K8S建置教學 (以三台環境建置為例)</h3><p>環境需3台。一台當master，二台當node</p>
 <p>「master、node」登入後切換至最高權限 sudo su<br><img src="/2018/03/27/Kubernetes/0.jpg" alt="K8S" title="sudo su"><br>執行apt-get update<br>執行apt-get upgrade -y<br>執行apt-get dist-upgrade -y<br>安裝docker：apt-get install –y docker.io<br>安裝kubelet kubeadm kubectl ：apt-get install -y kubelet kubeadm kubectl<br>kubeadm 管理k8s套件，依照文件照操作，如下圖<br><img src="/2018/03/27/Kubernetes/kubeadm.jpg" alt="kubeadm官方文件" title="kubeadm官方文件"><br><img src="/2018/03/27/Kubernetes/001.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/002.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/003.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/004.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/005.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/006.jpg" alt="安裝kubeadm" title="安裝kubeadm"></p>
-<p>「master、node」關閉SWAP，因為SWAP開著會無法安裝K8S<br>執行swapoff –a<br><img src="/2018/03/27/Kubernetes/swapoff.jpg" alt="安關閉SWAP" title="關閉SWAPS"></p>
+<p>「master、node」關閉SWAP，因為SWAP開著會無法安裝K8S<br>執行swapoff –a<br><img src="/2018/03/27/Kubernetes/swapoff.jpg" alt="關閉SWAP" title="關閉SWAPS"></p>
 <p>安裝完kubeadm之後進行初始化和架設網路，網路是使用fiannl來建置。<br>「master」 kubeadm初始化文件<br><img src="/2018/03/27/Kubernetes/screenshot_002.jpg" alt="kubeadm初始化文件" title="kubeadm初始化文件"><br>kubeadm init –pod-network-cidr=10.244.0.0/16<br><img src="/2018/03/27/Kubernetes/screenshot_003.jpg" alt="kubeadm初始化" title="kubeadm初始化"><br><img src="/2018/03/27/Kubernetes/screenshot_004.jpg" alt="kubeadm初始化" title="kubeadm初始化"></p>
 <p>「master」kubeadm架設網路<br>執行sysctl net.bridge.bridge-nf-call-iptables=1<br>「master」建置資料夾、COYP檔案、修改權限<br>執行mkdir -p $HOME/.kube<br>執行sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config<br>執行sudo chown $(id -u):$(id -g) $HOME/.kube/config<br><img src="/2018/03/27/Kubernetes/screenshot_006.jpg" alt="架設網路、建置資料夾、COYP檔案、修改權限" title="架設網路、建置資料夾、COYP檔案、修改權限"><br>執行完後會出現join node，綠框的金鑰複製下來。</p>
 <p>「node」 join node，貼上金鑰讓node加入到master，即完成cluster<br><img src="/2018/03/27/Kubernetes/screenshot_007.jpg" alt="node1 join" title="node1 join"><br><img src="/2018/03/27/Kubernetes/screenshot_008.jpg" alt="node2 join" title="node2 join"></p>
@@ -190,7 +190,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjfi4zjw00002a0k7ejbznmve" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjfi51aor0002p0k7oj1qfqgu" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
