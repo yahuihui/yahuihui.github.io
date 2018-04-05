@@ -9,18 +9,18 @@
     
         <meta name="keywords" content="Kubernetes、K8S" />
     
-    <meta name="description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於託管正在運行的應用程序。 K8S屬分布式系統，主要元件有：">
+    <meta name="description" content="Kubernetes 是什麼Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行的應">
 <meta name="keywords" content="Kubernetes、K8S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kubernetes">
 <meta property="og:url" content="https://www.yahuihu.info/2018/03/27/Kubernetes/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於託管正在運行的應用程序。 K8S屬分布式系統，主要元件有：">
+<meta property="og:description" content="Kubernetes 是什麼Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行的應">
 <meta property="og:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/k8s_cluster.jpg">
-<meta property="og:updated_time" content="2018-04-04T17:23:49.419Z">
+<meta property="og:updated_time" content="2018-04-05T17:59:30.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
-<meta name="twitter:description" content="Kubernetes 是什麼Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於託管正在運行的應用程序。 K8S屬分布式系統，主要元件有：">
+<meta name="twitter:description" content="Kubernetes 是什麼Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行的應">
 <meta name="twitter:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/k8s_cluster.jpg">
     
 
@@ -166,13 +166,13 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="Kubernetes-是什麼"><a href="#Kubernetes-是什麼" class="headerlink" title="Kubernetes 是什麼"></a>Kubernetes 是什麼</h3><p>Kubernetes (通常稱為K8s) 是自動化容器操作的開源平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。<br>簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。</p>
-<p><img src="/2018/03/27/Kubernetes/k8s_cluster.jpg" alt="k8s_cluster" title="k8s_cluster"><br><img src="/2018/03/27/Kubernetes/k8s_nodes.jpg" alt="K8S_nodes" title="k8s_nodes.jpg"><br>主服務器(master)管理集群，節點(nodes)用於託管正在運行的應用程序。</p>
-<p>K8S屬分布式系統，主要元件有：<br>一、Master – 主服務器(master)管理集群。包含以下元件：<br>    1.API Server：提供給外部使用者和內部元件呼叫。<br>    2.scheduler：負責各種排程作業。<br>    3.controller：負責執行各種控制。<br>二、. Node – 執行k8s的實體或虛擬的主機，並運行了許多容器。包含以下元件：<br>    1.kubelet：負責Kubernetes Master和Node之間的通信的過程; 它管理機器上運行的Pod和容器。<br>    2.kubernetes proxy：Proxy是為了解決外部網絡能夠訪問跨機器集群中容器提供的應用服務而設計的。<br>    3.docker：node是容器執行節點，需要執行docker服務<br>管理pod、檢查容器是否正常運行、監控所有節點的資源使用狀況<br>在 kubernetes 的設定中，最基本的管理单位是pod，而不是 container。pod是許多容器的組合。<br><img src="/2018/03/27/Kubernetes/pod.jpg" alt="pod" title="pod VS container"></p>
+            <h3 id="Kubernetes-是什麼"><a href="#Kubernetes-是什麼" class="headerlink" title="Kubernetes 是什麼"></a>Kubernetes 是什麼</h3><p>Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。<br>簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。</p>
+<p><img src="/2018/03/27/Kubernetes/k8s_cluster.jpg" alt="k8s_cluster" title="k8s_cluster"><br><img src="/2018/03/27/Kubernetes/k8s_nodes.jpg" alt="K8S_nodes" title="k8s_nodes.jpg"><br>主服務器(master)管理集群，節點(nodes)用於管理正在運行的應用程序。</p>
+<p>在 kubernetes 的設定中，最基本的管理单位是pod。pod是一個或多個容器的組合，容器才是真正的執行個體。<br>Pod中的每個容器都共享網路，包括IP地址和網路端口<br><img src="/2018/03/27/Kubernetes/pod.jpg" alt="pod" title="pod VS container"></p>
+<p>K8S屬分布式系統，主要元件有：<br>一、Master – 主服務器(master)管理集群。包含以下元件：<br>    1.API Server：是整個系统的對外接口，提供給外部使用者和內部元件呼叫。<br>    2.scheduler：負責各種排程作業、對資源進行調度，分配某個pod 到某個節點node上。<br>    3.controller：負責執行各種控制。<br>二、Node – 執行k8s的實體或虛擬的主機，並運行了許多容器。包含以下元件：<br>    1.kubelet：負責Kubernetes Master和Node之間的通信的過程; 它管理機器上運行的Pod和容器。<br>    2.kubernetes proxy：Proxy是為了解決外部網絡能夠訪問跨機器集群中容器提供的應用服務。<br>    3.docker：管理pod、檢查容器是否正常運行、監控所有節點的資源使用狀況，是Pod中使用的最常見的容器運行<br><img src="/2018/03/27/Kubernetes/k8s1.jpg" alt="k8s1" title="k8s1"></p>
 <h3 id="K8S-架構"><a href="#K8S-架構" class="headerlink" title="K8S 架構"></a>K8S 架構</h3><p><img src="/2018/03/27/Kubernetes/k8s_architecture.jpg" alt="k8s_architecture" title="k8s_architecture"></p>
 <p>這些節點使用主機公開的Kubernetes API與主機進行通信。</p>
-<p>Kubernetes中所有的配置都是通过API对象的spec去设置的<br>kubernates 是使用etcd做為系統的設定儲存中心、重要資料都是持久化在etcd中的。</p>
-<p>kubectl是和Kubernetes API交互的命令行程序<br>kubectl是用於針對Kubernetes群集運行命令的命令行界面</p>
+<p>Kubernetes中所有的配置都是通过API对象的spec去设置的<br>kubernates是使用etcd做為系統的設定儲存中心、重要資料都是持久化在etcd中的。<br>kubectl是和Kubernetes API交互的命令行程序<br>kubectl是用於針對Kubernetes群集運行命令的命令行界面</p>
 <p>Kubernetes集群内部存在三個IP，分别是：<br>Node IP：主機的IP地址<br>Pod IP：使用网络插件创建的IP（如flannel），使跨主机的Pod可以互通<br>Cluster IP：虚拟IP，通过iptables规则访问服务</p>
 <h3 id="K8S建置教學-以三台環境建置為例"><a href="#K8S建置教學-以三台環境建置為例" class="headerlink" title="K8S建置教學 (以三台環境建置為例)"></a>K8S建置教學 (以三台環境建置為例)</h3><p>環境需3台。一台當master，二台當node</p>
 <p>「master、node」登入後切換至最高權限 sudo su<br><img src="/2018/03/27/Kubernetes/0.jpg" alt="K8S" title="sudo su"><br>執行apt-get update<br>執行apt-get upgrade -y<br>執行apt-get dist-upgrade -y<br>安裝docker：apt-get install –y docker.io<br>kubeadm 管理k8s套件，依照文件照操作，如下圖<br><img src="/2018/03/27/Kubernetes/kubeadm.jpg" alt="kubeadm官方文件" title="kubeadm官方文件"></p>
@@ -192,7 +192,7 @@
 <h3 id="測試cluster，以nginx為例"><a href="#測試cluster，以nginx為例" class="headerlink" title="測試cluster，以nginx為例"></a>測試cluster，以nginx為例</h3><p>建置nginx pods狀態，nginx的狀態要在running<br>執行kubectl run nginx –image=nginx –replicas=2 –port=80<br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="建置nginx" title="建置ngin台"><br>查詢pods<br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="查詢pods" title="查詢pods"><br>開始部署<br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="開始部署" title="開始部署"><br>開服務使用的port<br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="開服務使用的port" title="開服務使用的port"><br>查詢服務狀態<br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="查詢服務狀態" title="查詢服務狀態"><br> 網頁測試<br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt=" 網頁測試" title=" 網頁測試"></p>
 <hr>
 <p>如需重建，整組刪掉後再進行kubectl init<br><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="kubeamd reset 刪除" title="kubeamd reset 刪除"></p>
-<p>参考文獻<br><a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" target="_blank" rel="noopener">1.https://kubernetes.io/docs/setup/independent/install-kubeadm/</a><br><a href="https://jimmysong.io/kubernetes-handbook/concepts/concepts.html" target="_blank" rel="noopener">2.https://jimmysong.io/kubernetes-handbook/concepts/concepts.html</a><br><a herf="http://cizixs.com/2016/10/25/kubernetes-intro-kubelet">3.http://cizixs.com/2016/10/25/kubernetes-intro-kubelet </a><br><a herf="https://jimmysong.io/kubernetes-handbook/">4.https://jimmysong.io/kubernetes-handbook </a><br><a herf="https://kubernetes.io/docs/tutorials/kubernetes-basics/explore-intro/">5.https://kubernetes.io/docs/tutorials/kubernetes-basics/explore-intro/ </a></p>
+<p>参考文獻<br><a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" target="_blank" rel="noopener">https://kubernetes.io/docs/setup/independent/install-kubeadm/</a><br><a href="https://jimmysong.io/kubernetes-handbook/concepts/concepts.html" target="_blank" rel="noopener">https://jimmysong.io/kubernetes-handbook/concepts/concepts.html</a><br><a herf="http://cizixs.com/2016/10/25/kubernetes-intro-kubelet">http://cizixs.com/2016/10/25/kubernetes-intro-kubelet </a><br><a herf="https://jimmysong.io/kubernetes-handbook/">https://jimmysong.io/kubernetes-handbook </a><br><a herf="https://kubernetes.io/docs/tutorials/kubernetes-basics/explore-intro/">https://kubernetes.io/docs/tutorials/kubernetes-basics/explore-intro/ </a><br><a herf="https://yeasy.gitbooks.io/docker_practice/content/kubernetes/concepts.html">https://yeasy.gitbooks.io/docker_practice/content/kubernetes/concepts.html </a></p>
 
         </div>
         <footer class="article-footer">
@@ -200,7 +200,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjfld3dab00024sk76jkr54pl" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjfmtu3wb000230k7v6yp7wqw" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
