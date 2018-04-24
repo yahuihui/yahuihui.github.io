@@ -16,12 +16,12 @@
 <meta property="og:url" content="https://www.yahuihu.info/2018/03/27/Kubernetes/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Kubernetes 是什麼Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行的應">
-<meta property="og:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/k8s_cluster.jpg">
-<meta property="og:updated_time" content="2018-04-20T08:21:26.922Z">
+<meta property="og:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/k8s.jpg">
+<meta property="og:updated_time" content="2018-04-24T09:11:27.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
 <meta name="twitter:description" content="Kubernetes 是什麼Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行的應">
-<meta name="twitter:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/k8s_cluster.jpg">
+<meta name="twitter:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/k8s.jpg">
     
 
     
@@ -68,13 +68,13 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
                                         
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
                                 </li>
                             
                         </ul>
@@ -82,7 +82,7 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -103,8 +103,8 @@
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'categories',
-            TAGS: 'etiquetes',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -130,7 +130,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sense categoria
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
@@ -166,7 +166,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="Kubernetes-是什麼"><a href="#Kubernetes-是什麼" class="headerlink" title="Kubernetes 是什麼"></a>Kubernetes 是什麼</h3><p>Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。<br>簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。</p>
+            <h3 id="Kubernetes-是什麼"><a href="#Kubernetes-是什麼" class="headerlink" title="Kubernetes 是什麼"></a>Kubernetes 是什麼</h3><p><img src="/2018/03/27/Kubernetes/k8s.jpg" alt="k8s" title="k8s"><br>Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。<br>簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。</p>
 <p><img src="/2018/03/27/Kubernetes/k8s_cluster.jpg" alt="k8s_cluster" title="k8s_cluster"><br><img src="/2018/03/27/Kubernetes/k8s_nodes.jpg" alt="K8S_nodes" title="k8s_nodes.jpg"><br>主服務器(master)管理集群，節點(nodes)用於管理正在運行的應用程序。</p>
 <p>在 kubernetes 的設定中，最基本的管理单位是pod。pod是一個或多個容器的組合，容器才是真正的執行個體。<br>Pod中的每個容器都共享網路，包括IP地址和網路端口<br><img src="/2018/03/27/Kubernetes/pod.jpg" alt="pod" title="pod VS container"></p>
 <p>K8S屬分布式系統，主要元件有：<br>一、Master – 主服務器(master)管理集群。包含以下元件：<br>    1.API Server：是整個系统的對外接口，提供給外部使用者和內部元件呼叫。<br>    2.scheduler：負責各種排程作業、對資源進行調度，分配某個pod 到某個節點node上。<br>    3.controller：負責執行各種控制。<br>二、Node – 執行k8s的實體或虛擬的主機，並運行了許多容器。包含以下元件：<br>    1.kubelet：負責Kubernetes Master和Node之間的通信的過程; 它管理機器上運行的Pod和容器。<br>    2.kubernetes proxy：Proxy是為了解決外部網絡能夠訪問跨機器集群中容器提供的應用服務。<br>    3.docker：管理pod、檢查容器是否正常運行、監控所有節點的資源使用狀況，是Pod中使用的最常見的容器運行<br><img src="/2018/03/27/Kubernetes/k8s1.jpg" alt="k8s基本概念" title="k8s基本概念"></p>
@@ -202,7 +202,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjgdg768c0001n4k77yjfh9bf" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjgdgbeb50001dck7l7umiujy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -282,7 +282,7 @@
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>seguir:</p>
+        <p>follow:</p>
         <ul class="social-links">
             
                 
@@ -340,7 +340,7 @@
 <nav id="article-nav">
     
         <a href="/2018/03/28/ELK_filebeat/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
+        <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
             filebeat
@@ -351,7 +351,7 @@
     
     
         <a href="/2018/03/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
+        <strong class="article-nav-caption">older</strong>
         <p class="article-nav-title">Hello World</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -417,7 +417,7 @@
                             <a href="/2018/03/27/Kubernetes/" class="thumbnail">
     
     
-        <span style="background-image:url(/2018/03/27/Kubernetes/k8s_cluster.jpg)" alt="Kubernetes" class="thumbnail-image"></span>
+        <span style="background-image:url(/2018/03/27/Kubernetes/k8s.jpg)" alt="Kubernetes" class="thumbnail-image"></span>
     
     
 </a>
@@ -461,7 +461,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">arxius</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
@@ -471,7 +471,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">etiquetes</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes、K8S/">Kubernetes、K8S</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -481,7 +481,7 @@
             
                 
     <div class="widget-wrap widget-float">
-        <h3 class="widget-title">etiqueta cloud</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/Kubernetes、K8S/" style="font-size: 10px;">Kubernetes、K8S</a>
         </div>
