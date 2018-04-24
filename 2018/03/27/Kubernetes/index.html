@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="什麼是 Kubernetes？Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行">
 <meta property="og:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/k8slogo.jpg">
-<meta property="og:updated_time" content="2018-04-24T09:19:28.084Z">
+<meta property="og:updated_time" content="2018-04-24T10:04:52.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
 <meta name="twitter:description" content="什麼是 Kubernetes？Kubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行">
@@ -192,7 +192,7 @@
 <p>「node」 join node，貼上金鑰讓node加入到master，即完成cluster<br><img src="/2018/03/27/Kubernetes/screenshot_007.jpg" alt="node1 join" title="node1 join"><br><img src="/2018/03/27/Kubernetes/screenshot_008.jpg" alt="node2 join" title="node2 join"></p>
 <p>「master」真正分配網路<br><img src="/2018/03/27/Kubernetes/screenshot_009.jpg" alt="分配網路文件" title="分配網路文件"><br><img src="/2018/03/27/Kubernetes/screenshot_010.jpg" alt="分配網路" title="分配網路"></p>
 <p>「master」檢查 DNS 狀態狀態<br>執行kubectl get pods –namespace kube-system<br>剛開始 dns 還是 pending 狀態，等過一段時間後就會是 running 狀態<br><img src="/2018/03/27/Kubernetes/screenshot_011.jpg" alt="檢查 DNS 狀態狀態" title="檢查 DNS 狀態狀態"><br>以上k8s建置完畢</p>
-<h3 id="測試cluster，以nginx為例"><a href="#測試cluster，以nginx為例" class="headerlink" title="測試cluster，以nginx為例"></a>測試cluster，以nginx為例</h3><p>建置nginx pods狀態，nginx的狀態要在running<br>執行kubectl run nginx –image=nginx –replicas=2 –port=80<br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="建置nginx" title="建置ngin台"><br>查詢pods<br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="查詢pods" title="查詢pods"><br>開始部署<br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="開始部署" title="開始部署"><br>開服務使用的port<br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="開服務使用的port" title="開服務使用的port"><br>查詢服務狀態<br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="查詢服務狀態" title="查詢服務狀態"><br> 網頁測試<br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt=" 網頁測試" title=" 網頁測試"></p>
+<h3 id="測試cluster，以nginx為例"><a href="#測試cluster，以nginx為例" class="headerlink" title="測試cluster，以nginx為例"></a>測試cluster，以nginx為例</h3><p>建置nginx pods狀態，nginx的狀態要在running<br>執行kubectl run nginx –image=nginx –replicas=2 –port=80<br><img src="/2018/03/27/Kubernetes/screenshot_012.jpg" alt="建置nginx" title="建置ngin台"><br>查詢pods<br>執行 kubectl get pods<br><img src="/2018/03/27/Kubernetes/screenshot_013.jpg" alt="查詢pods" title="查詢pods"><br>開始部署<br>執行 kubectl get deploy<br><img src="/2018/03/27/Kubernetes/screenshot_014.jpg" alt="開始部署" title="開始部署"><br>開服務使用的port<br>執行 kubectl expose deploy nginx –type=NodePort<br><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="開服務使用的port" title="開服務使用的port"><br>查詢服務狀態<br>執行 kubectl get service<br><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="查詢服務狀態" title="查詢服務狀態"><br> 網頁測試<br> VM的IP+NodePort<br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt=" 網頁測試" title=" 網頁測試"></p>
 <hr>
 <p>如需重建，整組刪掉後再進行kubectl init<br><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="kubeamd reset 刪除" title="kubeamd reset 刪除"></p>
 <p>参考文獻<br><a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" target="_blank" rel="noopener">https://kubernetes.io/docs/setup/independent/install-kubeadm/</a><br><a href="https://jimmysong.io/kubernetes-handbook/concepts/concepts.html" target="_blank" rel="noopener">https://jimmysong.io/kubernetes-handbook/concepts/concepts.html</a><br><a herf="http://cizixs.com/2016/10/25/kubernetes-intro-kubelet">http://cizixs.com/2016/10/25/kubernetes-intro-kubelet </a><br><a herf="https://jimmysong.io/kubernetes-handbook/">https://jimmysong.io/kubernetes-handbook </a><br><a herf="https://kubernetes.io/docs/tutorials/kubernetes-basics/explore-intro/">https://kubernetes.io/docs/tutorials/kubernetes-basics/explore-intro/ </a><br><a herf="https://yeasy.gitbooks.io/docker_practice/content/kubernetes/concepts.html">https://yeasy.gitbooks.io/docker_practice/content/kubernetes/concepts.html </a></p>
@@ -203,7 +203,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjgdgliki00018wk7rom24nlt" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjgdi7y5000024gk73x11a2lb" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
