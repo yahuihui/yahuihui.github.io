@@ -9,18 +9,18 @@
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="ELK 簡介ELK 是 Elasticsearch、Logstash 和 Kibana 三種軟體產品的首字母縮寫，這三者都是開源軟體。 Elasticsearch︰分散式搜索和分析引擎。具有高可伸縮、高可靠和易管理等特點。能對大容量的資料進行接近實時的存儲、搜索和分析操作。 Logstash︰資料收集引擎。從各種資料源搜集資料，並對資料進行過濾、分析、豐富、統一格式等操作，然後存儲到用戶指定的位置">
+    <meta name="description" content="ELK 簡介ELK 是 Elasticsearch、Logstash 和 Kibana 三種軟體產品的首字母縮寫，這三者都是開源軟體。 Elasticsearch︰分散式搜索和分析引擎。具有高可伸縮、高可靠和易管理等特點。能對大容量的資料進行接近實時的存儲、搜索和分析操作。 Logstash︰資料收集引擎。從各種資料源搜集資料，並對資料進行過濾、分析、豐富、統一格式等操作，然後存儲到用戶指定的位">
 <meta property="og:type" content="article">
 <meta property="og:title" content="filebeat">
 <meta property="og:url" content="https://www.yahuihu.info/2018/03/28/ELK_filebeat/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ELK 簡介ELK 是 Elasticsearch、Logstash 和 Kibana 三種軟體產品的首字母縮寫，這三者都是開源軟體。 Elasticsearch︰分散式搜索和分析引擎。具有高可伸縮、高可靠和易管理等特點。能對大容量的資料進行接近實時的存儲、搜索和分析操作。 Logstash︰資料收集引擎。從各種資料源搜集資料，並對資料進行過濾、分析、豐富、統一格式等操作，然後存儲到用戶指定的位置">
-<meta property="og:image" content="https://www.yahuihu.info/2018/03/28/ELK_filebeat/filebeat01.jpg">
-<meta property="og:updated_time" content="2018-04-02T09:24:28.113Z">
+<meta property="og:description" content="ELK 簡介ELK 是 Elasticsearch、Logstash 和 Kibana 三種軟體產品的首字母縮寫，這三者都是開源軟體。 Elasticsearch︰分散式搜索和分析引擎。具有高可伸縮、高可靠和易管理等特點。能對大容量的資料進行接近實時的存儲、搜索和分析操作。 Logstash︰資料收集引擎。從各種資料源搜集資料，並對資料進行過濾、分析、豐富、統一格式等操作，然後存儲到用戶指定的位">
+<meta property="og:image" content="https://www.yahuihu.info/2018/03/28/ELK_filebeat/filebeat.jpg">
+<meta property="og:updated_time" content="2018-04-24T09:14:16.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="filebeat">
-<meta name="twitter:description" content="ELK 簡介ELK 是 Elasticsearch、Logstash 和 Kibana 三種軟體產品的首字母縮寫，這三者都是開源軟體。 Elasticsearch︰分散式搜索和分析引擎。具有高可伸縮、高可靠和易管理等特點。能對大容量的資料進行接近實時的存儲、搜索和分析操作。 Logstash︰資料收集引擎。從各種資料源搜集資料，並對資料進行過濾、分析、豐富、統一格式等操作，然後存儲到用戶指定的位置">
-<meta name="twitter:image" content="https://www.yahuihu.info/2018/03/28/ELK_filebeat/filebeat01.jpg">
+<meta name="twitter:description" content="ELK 簡介ELK 是 Elasticsearch、Logstash 和 Kibana 三種軟體產品的首字母縮寫，這三者都是開源軟體。 Elasticsearch︰分散式搜索和分析引擎。具有高可伸縮、高可靠和易管理等特點。能對大容量的資料進行接近實時的存儲、搜索和分析操作。 Logstash︰資料收集引擎。從各種資料源搜集資料，並對資料進行過濾、分析、豐富、統一格式等操作，然後存儲到用戶指定的位">
+<meta name="twitter:image" content="https://www.yahuihu.info/2018/03/28/ELK_filebeat/filebeat.jpg">
     
 
     
@@ -160,7 +160,8 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="ELK-簡介"><a href="#ELK-簡介" class="headerlink" title="ELK 簡介"></a>ELK 簡介</h3><p>ELK 是 Elasticsearch、Logstash 和 Kibana 三種軟體產品的首字母縮寫，這三者都是開源軟體。</p>
+            <p><img src="/2018/03/28/ELK_filebeat/filebeat.jpg" alt="filebeat" title="filebeat"></p>
+<h3 id="ELK-簡介"><a href="#ELK-簡介" class="headerlink" title="ELK 簡介"></a>ELK 簡介</h3><p>ELK 是 Elasticsearch、Logstash 和 Kibana 三種軟體產品的首字母縮寫，這三者都是開源軟體。</p>
 <p>Elasticsearch︰分散式搜索和分析引擎。具有高可伸縮、高可靠和易管理等特點。能對大容量的資料進行接近實時的存儲、搜索和分析操作。</p>
 <p>Logstash︰資料收集引擎。從各種資料源搜集資料，並對資料進行過濾、分析、豐富、統一格式等操作，然後存儲到用戶指定的位置。 </p>
 <p>Kibana︰資料分析和可視化平台。通常與 Elasticsearch 配合使用，對其中資料進行搜索、分析和以統計圖表的方式展示。 </p>
@@ -179,7 +180,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/03/28/ELK_filebeat/" data-id="cjgdgbeb10000dck79jin5mv7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://www.yahuihu.info/2018/03/28/ELK_filebeat/" data-id="cjgdgexlm00009ok7j8spyrgi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -374,7 +375,7 @@
                             <a href="/2018/03/28/ELK_filebeat/" class="thumbnail">
     
     
-        <span style="background-image:url(/2018/03/28/ELK_filebeat/filebeat01.jpg)" alt="filebeat" class="thumbnail-image"></span>
+        <span style="background-image:url(/2018/03/28/ELK_filebeat/filebeat.jpg)" alt="filebeat" class="thumbnail-image"></span>
     
     
 </a>
