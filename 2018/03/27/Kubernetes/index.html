@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="沒事不要看會瞎的">
 <meta property="og:description" content="什麼是 KubernetesKubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行的">
 <meta property="og:image" content="https://www.yahuihu.info/2018/03/27/Kubernetes/k8slogo.jpg">
-<meta property="og:updated_time" content="2018-05-18T10:06:54.291Z">
+<meta property="og:updated_time" content="2018-06-12T02:50:26.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kubernetes">
 <meta name="twitter:description" content="什麼是 KubernetesKubernetes(通常稱為K8s)是 Google 團隊開發的開源項目，它的目標是管理跨多個主机的容器平台，它建置在docker技術之上，用於自動部署、隨時擴展或收縮容器和管理容器化（containerized）應用程式的開源系統。簡言之，以更高效的方式自動化跨群集的應用程序容器的分發和調度。 主服務器(master)管理集群，節點(nodes)用於管理正在運行的">
@@ -68,13 +68,13 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
                                         
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
                                 </li>
                             
                         </ul>
@@ -82,7 +82,7 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -103,8 +103,8 @@
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'categories',
-            TAGS: 'etiquetes',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -130,7 +130,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sense categoria
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
@@ -181,7 +181,7 @@
 <p>「master、node」登入後切換至最高權限 sudo su<br><img src="/2018/03/27/Kubernetes/0.jpg" alt="K8S" title="sudo su"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt-get update </span><br><span class="line">apt-get upgrade -y</span><br><span class="line">apt-get dist-upgrade -y</span><br><span class="line">docker：apt-get install –y docker.io</span><br></pre></td></tr></table></figure></p>
 <p>kubeadm 管理k8s套件，依照文件照操作，如下圖<br><img src="/2018/03/27/Kubernetes/kubeadm.jpg" alt="kubeadm官方文件" title="kubeadm官方文件"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">apt-get update &amp;&amp; apt-get install -y apt-transport-https </span><br><span class="line"></span><br><span class="line">curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - </span><br><span class="line"> </span><br><span class="line">cat &lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list </span><br><span class="line">deb http://apt.kubernetes.io/ kubernetes-xenial main </span><br><span class="line">EOF </span><br><span class="line"> </span><br><span class="line">apt-get update </span><br><span class="line"> </span><br><span class="line">apt-get install -y kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure></p>
 <p><img src="/2018/03/27/Kubernetes/001.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/002.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/003.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/004.jpg" alt="安裝kubeadm" title="安裝kubeadm"><br><img src="/2018/03/27/Kubernetes/005.jpg" alt="安裝kubeadm" title="安裝kubeadm"></p>
-<p>「master、node」關閉SWAP，因為SWAP開著會無法安裝K8S<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swapoff –a</span><br></pre></td></tr></table></figure></p>
+<p>「master、node」關閉SWAP，這是由於目前尚不支援 swap 分區，執行下列指令將 swap 關閉即可, SWAP開著會無法安裝K8S<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swapoff –a</span><br></pre></td></tr></table></figure></p>
 <p><img src="/2018/03/27/Kubernetes/swapoff.jpg" alt="關閉SWAP" title="關閉SWAPS"></p>
 <p>安裝完kubeadm之後進行初始化和架設網路，網路是使用fiannl來建置。<br>「master」 kubeadm初始化文件</p>
 <p><img src="/2018/03/27/Kubernetes/screenshot_002.jpg" alt="kubeadm初始化文件" title="kubeadm初始化文件"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init - -pod-network-cidr=10.244.0.0/16</span><br></pre></td></tr></table></figure></p>
@@ -201,7 +201,7 @@
 <p><img src="/2018/03/27/Kubernetes/screenshot_015.jpg" alt="開服務使用的port" title="開服務使用的port"><br>查詢服務狀態<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get service</span><br></pre></td></tr></table></figure></p>
 <p><img src="/2018/03/27/Kubernetes/screenshot_016.jpg" alt="查詢服務狀態" title="查詢服務狀態"><br> 網頁測試<br> VM的IP+NodePort<br><img src="/2018/03/27/Kubernetes/screenshot_017.jpg" alt=" 網頁測試" title=" 網頁測試"></p>
 <hr>
-<p>如需重建，整組刪掉後再進行kubectl init<br><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="kubeamd reset 刪除" title="kubeamd reset 刪除"></p>
+<p>如需重建，整組刪掉後包含master和node，再進行kubectl init<br>注意: 此指令會移除所有 Kubernetes 相關服務及資料<br><img src="/2018/03/27/Kubernetes/screenshot_001.jpg" alt="kubeamd reset 刪除" title="kubeamd reset 刪除"></p>
 <p>参考文獻<br><a href="https://kubernetes.io/docs/setup/independent/install-kubeadm/" target="_blank" rel="noopener">https://kubernetes.io/docs/setup/independent/install-kubeadm/</a><br><a href="https://jimmysong.io/kubernetes-handbook/concepts/concepts.html" target="_blank" rel="noopener">https://jimmysong.io/kubernetes-handbook/concepts/concepts.html</a><br><a herf="http://cizixs.com/2016/10/25/kubernetes-intro-kubelet">http://cizixs.com/2016/10/25/kubernetes-intro-kubelet </a><br><a herf="https://jimmysong.io/kubernetes-handbook/">https://jimmysong.io/kubernetes-handbook </a><br><a herf="https://kubernetes.io/docs/tutorials/kubernetes-basics/explore-intro/">https://kubernetes.io/docs/tutorials/kubernetes-basics/explore-intro/ </a><br><a herf="https://yeasy.gitbooks.io/docker_practice/content/kubernetes/concepts.html">https://yeasy.gitbooks.io/docker_practice/content/kubernetes/concepts.html </a></p>
 
         </div>
@@ -210,7 +210,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjhbvi49200005wk7exbipdcu" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.yahuihu.info/2018/03/27/Kubernetes/" data-id="cjib3ad9i000010k77h6b8s1c" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -290,7 +290,7 @@
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>seguir:</p>
+        <p>follow:</p>
         <ul class="social-links">
             
                 
@@ -348,7 +348,7 @@
 <nav id="article-nav">
     
         <a href="/2018/03/28/ELK_filebeat/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
+        <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
             filebeat
@@ -359,7 +359,7 @@
     
     
         <a href="/2018/03/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
+        <strong class="article-nav-caption">older</strong>
         <p class="article-nav-title">Hello World</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -469,7 +469,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">arxius</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
@@ -479,7 +479,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">etiquetes</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes、K8S/">Kubernetes、K8S</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -489,7 +489,7 @@
             
                 
     <div class="widget-wrap widget-float">
-        <h3 class="widget-title">etiqueta cloud</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/Kubernetes、K8S/" style="font-size: 10px;">Kubernetes、K8S</a>
         </div>
