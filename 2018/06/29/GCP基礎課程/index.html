@@ -9,15 +9,18 @@
     
         <meta name="keywords" content="" />
     
-    <meta property="og:type" content="article">
+    <meta name="description" content="GCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc) -Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container En">
+<meta property="og:type" content="article">
 <meta property="og:title" content="GCP基礎課程">
 <meta property="og:url" content="https://www.yahuihu.info/2018/06/29/GCP基礎課程/index.html">
 <meta property="og:site_name" content="沒事不要看會瞎的">
-<meta property="og:image" content="https://www.yahuihu.info/2018/06/29/GCP基礎課程/gcp01.jpg">
-<meta property="og:updated_time" content="2018-06-29T03:05:43.070Z">
+<meta property="og:description" content="GCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc) -Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container En">
+<meta property="og:image" content="https://www.yahuihu.info/2018/06/29/GCP基礎課程/google-cloud-platform.png">
+<meta property="og:updated_time" content="2018-06-29T03:46:02.922Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GCP基礎課程">
-<meta name="twitter:image" content="https://www.yahuihu.info/2018/06/29/GCP基礎課程/gcp01.jpg">
+<meta name="twitter:description" content="GCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc) -Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container En">
+<meta name="twitter:image" content="https://www.yahuihu.info/2018/06/29/GCP基礎課程/google-cloud-platform.png">
     
 
     
@@ -157,7 +160,14 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/2018/06/29/GCP基礎課程/gcp01.jpg" alt="GCP服務分類" title="GCP服務分類"></p>
+            <p><img src="/2018/06/29/GCP基礎課程/google-cloud-platform.png" alt="GCP服務分類" title="GCP服務分類"></p>
+<h1 id="GCP-介紹"><a href="#GCP-介紹" class="headerlink" title="GCP 介紹"></a>GCP 介紹</h1><p>google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc)</p>
+<p><img src="/2018/06/29/GCP基礎課程/gcp01.png" alt="GCP服務分類" title="GCP服務分類"><br><img src="/2018/06/29/GCP基礎課程/gcp02.png" alt="GCP服務分類" title="GCP服務分類"><br>-Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container Engine(GKE)，來服務使用Docker的用戶。</p>
+<p>-Big Data：大資料儲存方案，包含BigQuery, Dataflow等等處理大資料的相關方案。</p>
+<p>-Storage：儲存相關服務，包含SQL - CloudSQL, NoSQL - Datastore, File - Cloud Storage等儲存相關服務。</p>
+<p>-APIs：包含所有Google服務的可操作程式介面，讓需要的使用者以PaaS的方式與Google介接，使用Google之服務。</p>
+<p>-Networking：網路相關的服務，包含VPN與DNS服務，以Google管理的方式，提供網路層需要使用到的一些應用。</p>
+<h2 id="IAM-Identity-and-Access-Management"><a href="#IAM-Identity-and-Access-Management" class="headerlink" title="IAM (Identity and Access Management)"></a>IAM (Identity and Access Management)</h2><p>IAM 主要概念可以用這句話描述  ”誰，想要怎麼使用，哪些資源”<br><img src="/2018/06/29/GCP基礎課程/iam.png" alt="IAM" title="IAM"></p>
 
         </div>
         <footer class="article-footer">
@@ -165,7 +175,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/06/29/GCP基礎課程/" data-id="cjizeb5l70001nck7u1yd7s1x" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.yahuihu.info/2018/06/29/GCP基礎課程/" data-id="cjizfdrd80002n8k7oddea97j" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -302,6 +312,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2018/06/29/Cloud_comparison/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">més nou</strong>
+        <p class="article-nav-title">
+        
+            comparison
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2018/04/03/harbor/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
@@ -327,10 +347,30 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/06/29/Cloud_comparison/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/06/29/Cloud_comparison/GCE_compare.jpg)" alt="comparison" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/06/29/Cloud_comparison/" class="title">comparison</a></p>
+                            <p class="item-date"><time datetime="2018-06-29T03:34:36.000Z" itemprop="datePublished">2018-06-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/06/29/GCP基礎課程/" class="thumbnail">
     
     
-        <span style="background-image:url(/2018/06/29/GCP基礎課程/gcp01.jpg)" alt="GCP基礎課程" class="thumbnail-image"></span>
+        <span style="background-image:url(/2018/06/29/GCP基礎課程/google-cloud-platform.png)" alt="GCP基礎課程" class="thumbnail-image"></span>
     
     
 </a>
@@ -404,26 +444,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/03/20/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/03/20/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2018-03-19T18:01:16.926Z" itemprop="datePublished">2018-03-20</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -436,7 +456,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arxius</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
