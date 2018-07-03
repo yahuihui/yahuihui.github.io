@@ -9,17 +9,17 @@
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="GCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc) -Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container En">
+    <meta name="description" content="Google Cloud OnBoardGCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc)   Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GCP基礎課程">
 <meta property="og:url" content="https://www.yahuihu.info/2018/06/29/GCP基礎課程/index.html">
 <meta property="og:site_name" content="沒事不要看會瞎的">
-<meta property="og:description" content="GCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc) -Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container En">
+<meta property="og:description" content="Google Cloud OnBoardGCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc)   Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，">
 <meta property="og:image" content="https://www.yahuihu.info/2018/06/29/GCP基礎課程/google-cloud-platform.png">
-<meta property="og:updated_time" content="2018-06-29T06:45:52.157Z">
+<meta property="og:updated_time" content="2018-07-03T05:53:02.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GCP基礎課程">
-<meta name="twitter:description" content="GCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc) -Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container En">
+<meta name="twitter:description" content="Google Cloud OnBoardGCP 介紹google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc)   Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，">
 <meta name="twitter:image" content="https://www.yahuihu.info/2018/06/29/GCP基礎課程/google-cloud-platform.png">
     
 
@@ -67,13 +67,13 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Inicio</a>
+                                    <a class="main-nav-list-link" href="/">Inici</a>
                                 </li>
                             
                                         
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">Acerca de</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
                                 </li>
                             
                         </ul>
@@ -81,7 +81,7 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -100,10 +100,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -129,7 +129,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sin categoría
+    Sense categoria
     </h1>
 </div>
                         <div class="main-body-content">
@@ -161,13 +161,49 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/2018/06/29/GCP基礎課程/google-cloud-platform.png" alt="GCP服務分類" title="GCP服務分類"></p>
-<h1 id="GCP-介紹"><a href="#GCP-介紹" class="headerlink" title="GCP 介紹"></a>GCP 介紹</h1><p>google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc)</p>
-<p><img src="/2018/06/29/GCP基礎課程/gcp01.png" alt="GCP服務分類" title="GCP服務分類"><br><img src="/2018/06/29/GCP基礎課程/gcp02.png" alt="GCP服務分類" title="GCP服務分類"><br>-Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container Engine(GKE)，來服務使用Docker的用戶。</p>
-<p>-Big Data：大資料儲存方案，包含BigQuery, Dataflow等等處理大資料的相關方案。</p>
-<p>-Storage：儲存相關服務，包含SQL - CloudSQL, NoSQL - Datastore, File - Cloud Storage等儲存相關服務。</p>
-<p>-APIs：包含所有Google服務的可操作程式介面，讓需要的使用者以PaaS的方式與Google介接，使用Google之服務。</p>
-<p>-Networking：網路相關的服務，包含VPN與DNS服務，以Google管理的方式，提供網路層需要使用到的一些應用。</p>
-<h2 id="IAM-Identity-and-Access-Management"><a href="#IAM-Identity-and-Access-Management" class="headerlink" title="IAM (Identity and Access Management)"></a>IAM (Identity and Access Management)</h2><p>IAM 主要概念可以用這句話描述  ”誰，想要怎麼使用，哪些資源”<br><img src="/2018/06/29/GCP基礎課程/iam.png" alt="IAM" title="IAM"><br><img src="/2018/06/29/GCP基礎課程/iam01.png" alt="IAM" title="IAM"></p>
+<h1 id="Google-Cloud-OnBoard"><a href="#Google-Cloud-OnBoard" class="headerlink" title="Google Cloud OnBoard"></a>Google Cloud OnBoard</h1><h2 id="GCP-介紹"><a href="#GCP-介紹" class="headerlink" title="GCP 介紹"></a>GCP 介紹</h2><p>google所提供的雲端服務  (ex：computer engine、app engine、cloud storeage…etc)</p>
+<p><img src="/2018/06/29/GCP基礎課程/gcp01.png" alt="GCP服務分類" title="GCP服務分類"><br><img src="/2018/06/29/GCP基礎課程/gcp02.png" alt="GCP服務分類" title="GCP服務分類"></p>
+<ul>
+<li>Compute：以計算為主的服務，包含Compute Engine, App Engine等服務；我們多使用Compute Engine建執行個體; 近期Google更推出Container Service，稱作Google Container Engine(GKE)，來服務使用Docker的用戶。</li>
+<li>Big Data：大資料儲存方案，包含BigQuery, Dataflow等等處理大資料的相關方案。</li>
+<li>Storage：儲存相關服務，包含SQL - CloudSQL, NoSQL - Datastore, File - Cloud Storage等儲存相關服務。</li>
+<li>APIs：包含所有Google服務的可操作程式介面，讓需要的使用者以PaaS的方式與Google介接，使用Google之服務。</li>
+<li>Networking：網路相關的服務，包含VPN與DNS服務，以Google管理的方式，提供網路層需要使用到的一些應用。</li>
+</ul>
+<h2 id="IAM-Identity-and-Access-Management"><a href="#IAM-Identity-and-Access-Management" class="headerlink" title="IAM (Identity and Access Management)"></a>IAM (Identity and Access Management)</h2><p>IAM 主要概念可以用這句話描述  ”誰，想要怎麼使用，哪些資源”<br><img src="/2018/06/29/GCP基礎課程/iam.png" alt="IAM" title="IAM"></p>
+<p>GCP內部預設的角色有：</p>
+<ul>
+<li>Owner：資源的擁有者，可以再將資源分享給其他人員</li>
+<li>Editor：資源的可編輯者，可以針對資源進行新增、修改、刪除等動作</li>
+<li>Viewer：資源的檢視者，可以針對資源進行使用，但無法修改資源狀態。<br>服務代理人：</li>
+<li>default預設的管理員(Compute Engine default service account)請不要砍掉，否則會有無法預期的問題</li>
+</ul>
+<p><img src="/2018/06/29/GCP基礎課程/iam01.png" alt="IAM範例" title="IAM範例"></p>
+<h2 id="定價"><a href="#定價" class="headerlink" title="定價"></a>定價</h2><p>Google雲端平台將即用即付的定價推向極致，並採用行業領先的創新技術</p>
+<ul>
+<li><p>持續使用折扣：當您使用它們運行持續工作負載時，會自動降低虛擬機（VM）的價格。對於整個月運行的實例，賺取高達30％的折扣。計算引擎會自動折扣一個月內運行時間超過25％的實例。客戶平均享有24％的折扣。</p>
+</li>
+<li><p>每秒計費：提供真正的只付費即用型定價模式。例如，如果您正在構建微服務，或者只是運行一些資源測試，那麼您只需支付您使用GCP的微秒精確計費時間。</p>
+</li>
+<li><p>自定義機器類型：自定義機器類型可讓您輕鬆創建根據您的需求定制的機器類型，優惠折扣高達50％。</p>
+</li>
+<li>最適規模推薦：根據實例的使用情況推薦最佳數量的內核和內存。平均而言，調整每個實例可為客戶節省15％。</li>
+</ul>
+<p>計價方式：<a href="https://cloud.google.com/pricing/" target="_blank" rel="noopener">https://cloud.google.com/pricing/</a><br>計算機：<a href="https://cloud.google.com/products/calculator/" target="_blank" rel="noopener">https://cloud.google.com/products/calculator/</a></p>
+<h2 id="GCP指令列工具"><a href="#GCP指令列工具" class="headerlink" title="GCP指令列工具"></a>GCP指令列工具</h2><p>Cloud SDK 是一套 Cloud Platform 工具，其中包含 gcloud、gsutil、bq和kubectl，可讓您透過指令列存取 Google Compute Engine、Google Cloud Storage、Google BigQuery，以及其他產品和服務。您可以利用這些工具進行互動操作，也可以運用在您的自動化指令碼中。</p>
+<ul>
+<li><p>gcloud：是Google Cloud Platform提供主要命令行界面的工具。您可以使用此工具從命令行或腳本和其他自動化中執行許多常見的平台任務。</p>
+</li>
+<li><p>gsutil 工具提供指令列存取權，可用來管理 Cloud Storage 的 Bucket 和物件。Powershell cmdlet (Windows) 支援 PowerShell 的 Google 雲端工具 這是一套 Windows PowerShell cmdlet，可用於在 Windows PowerShell 環境中管理 Google Cloud Platform 資源。</p>
+</li>
+<li><p>bq 工具<br>bq 可讓您透過指令列在 BigQuery 中執行查詢，以及操作資料集、資料表和實體。</p>
+</li>
+<li><p>kubectl 工具<br>kubectl 可協調 Kubernetes 容器叢集在 gcloud 上的部署和管理作業。</p>
+</li>
+</ul>
+<h2 id="Stackdriver"><a href="#Stackdriver" class="headerlink" title="Stackdriver"></a>Stackdriver</h2><p>Stackdriver可以通過訪問世界各地的地點來驗證服務的可用性。</p>
+<p>Monitoring有一個概覽頁面，顯示您的所有正常運行時間檢查，以及詳細的個別檢查的儀表板。</p>
+<p>如果您正在檢查的資源不公開，則必須配置資源的防火牆以允許來自正常運行時間檢查服務器的傳入流量。</p>
 
         </div>
         <footer class="article-footer">
@@ -175,7 +211,7 @@
 
 
 
-    <a data-url="https://www.yahuihu.info/2018/06/29/GCP基礎課程/" data-id="cjizm2qdu0002nwk7xv9qg3nt" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://www.yahuihu.info/2018/06/29/GCP基礎課程/" data-id="cjj3lkv4i0002dok7lku683yv" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -313,7 +349,7 @@
 <nav id="article-nav">
     
         <a href="/2018/06/29/Cloud_comparison/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">más nuevo</strong>
+        <strong class="article-nav-caption">més nou</strong>
         <p class="article-nav-title">
         
             comparison
@@ -324,7 +360,7 @@
     
     
         <a href="/2018/04/03/harbor/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antiguo</strong>
+        <strong class="article-nav-caption">antic</strong>
         <p class="article-nav-title">harbor</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -340,7 +376,7 @@
             
                 
     <div class="widget-wrap">
-        <h3 class="widget-title">recientes</h3>
+        <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -454,7 +490,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archivos</h3>
+        <h3 class="widget-title">arxius</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
@@ -464,7 +500,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">etiquetas</h3>
+        <h3 class="widget-title">etiquetes</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes、K8S/">Kubernetes、K8S</a><span class="tag-list-count">1</span></li></ul>
         </div>
