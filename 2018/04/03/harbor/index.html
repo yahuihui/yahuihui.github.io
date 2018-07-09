@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="沒事不要看會瞎的">
 <meta property="og:description" content="什麼是 Harbor？？Harbor是VMware公司開源的企業級DockerRegistry項目，Docker Registry 是被用來儲存 Docker 所建立的映像檔的地方，我們可以把自己建立的映像檔透過上傳到 Registries 來分享給其他人Harbor是一個用於存儲和分發的Docker鏡像的企業級Registry服務器Harbor提供更好的性能、安全性、UI介面，使用者可以輕鬆的">
 <meta property="og:image" content="https://www.yahuihu.info/2018/04/03/harbor/harbor.jpg">
-<meta property="og:updated_time" content="2018-07-09T08:08:10.981Z">
+<meta property="og:updated_time" content="2018-07-09T08:10:52.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="harbor">
 <meta name="twitter:description" content="什麼是 Harbor？？Harbor是VMware公司開源的企業級DockerRegistry項目，Docker Registry 是被用來儲存 Docker 所建立的映像檔的地方，我們可以把自己建立的映像檔透過上傳到 Registries 來分享給其他人Harbor是一個用於存儲和分發的Docker鏡像的企業級Registry服務器Harbor提供更好的性能、安全性、UI介面，使用者可以輕鬆的">
@@ -167,10 +167,10 @@
 <h3 id="安裝Harbor"><a href="#安裝Harbor" class="headerlink" title="安裝Harbor"></a>安裝Harbor</h3><p>下載版本v1.1.1<br>wget <a href="https://github.com/vmware/harbor/releases/download/v1.1.1/harbor-online-installer-v1.1.1.tgz" target="_blank" rel="noopener">https://github.com/vmware/harbor/releases/download/v1.1.1/harbor-online-installer-v1.1.1.tgz</a><br><img src="/2018/04/03/harbor/download harbor.jpg" alt="下載harbor" title="下載harbor"><br>解壓縮檔案<br><img src="/2018/04/03/harbor/unzip.jpg" alt="解壓縮" title="解壓縮"></p>
 <h3 id="修改harbor-cfg"><a href="#修改harbor-cfg" class="headerlink" title="修改harbor.cfg"></a>修改harbor.cfg</h3><p><img src="/2018/04/03/harbor/harbor_cfg.jpg" alt="修改harbor.cfg" title="修改harbor.cfg"></p>
 <hr>
-<p>&lt; hostname = reg.mydomain.com<br>-&gt; hostname = harbor.<strong>___</strong>.xsg</p>
-<p>&lt; ui_url_protocol = http<br>-&gt; ui_url_protocol = https</p>
-<p>&lt; ssl_cert = /data/cert/server.crt<br>-&gt; ssl_cert = /data/cert/<strong>___</strong>.xsg.crt</p>
-<p>&lt; ssl_cert_key = /data/cert/server.key<br>-&gt; ssl_cert_key = /data/cert/<strong>___</strong>.xsg.key</p>
+<p> hostname = reg.mydomain.com<br>→ hostname = harbor.<strong>___</strong>.xsg</p>
+<p> ui_url_protocol = http<br>→ ui_url_protocol = https</p>
+<p> ssl_cert = /data/cert/server.crt<br>→ ssl_cert = /data/cert/<strong>___</strong>.xsg.crt</p>
+<p> ssl_cert_key = /data/cert/server.key<br>→ ssl_cert_key = /data/cert/<strong>___</strong>.xsg.key</p>
 <p><img src="/2018/04/03/harbor/fix_harbor_cfg.jpg" alt="修改harbor.cfg" title="修改harbor.cfg"></p>
 <hr>
 <p>harbor安裝<br>sudo ./install.sh</p>
